@@ -1,9 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
+/*
+ * Developed by Prishan Maduka on 3/29/22, 1:19 PM
+ * Last modified 3/29/22, 1:19 PM
+ * Copyright (c) 2022. All rights reserved Prishan Maduka
  */
 
 import React from 'react';
