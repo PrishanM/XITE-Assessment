@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Developed by Prishan Maduka on 3/29/22, 5:14 PM
+  ~ Last modified 3/29/22, 5:14 PM
+  ~ Copyright (c) 2022. All rights reserved Prishan Maduka
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:drawable="@color/black"/>
+
+    <item
+            android:width="250dp"
+            android:height="250dp"
+            android:drawable="@mipmap/icon_logo"
+            android:gravity="center" />
+
+</layer-list>
