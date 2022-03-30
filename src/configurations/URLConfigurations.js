@@ -4,3 +4,8 @@
  * Copyright (c) 2022. All rights reserved Prishan Maduka
  */
 
+export const appURLs = {
+    BASE_URL : 'https://raw.githubusercontent.com/XiteTV/frontend-coding-exercise/',
+    GET_VIDEOS_LIST : 'main/data/dataset.json'
+}
+

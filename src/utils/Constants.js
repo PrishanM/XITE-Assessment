@@ -10,3 +10,11 @@ export const FONT_WEIGHT = {
     FONT_WEIGHT_REGULAR : 'REGULAR'
 }
 
+export const REQUEST_CONFIG = {
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    timeout: 18000
+};
+

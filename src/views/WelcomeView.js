@@ -8,6 +8,7 @@ import React, {useEffect,useRef} from 'react';
 import {View,Animated,StyleSheet} from 'react-native';
 import {Actions} from "react-native-router-flux";
 import {viewStyles} from "../styles/AppStyles";
+import {appColors} from "../styles/Colors";
 
 const WelcomeView = () => {
 
@@ -28,10 +29,10 @@ const WelcomeView = () => {
     };
 
     return(
-        <View style={viewStyles.parentViewStyle}>
+        <View style={[viewStyles.parentViewStyle,{backgroundColor:appColors.blackColor}]}>
 
             <Animated.Image
-                source={require('../assets/images/icon_logo.webp')}
+                source={require('../assets/images/xite_logo_transparent.png')}
                 resizeMode='contain'
                 onLoad={onLoad}
                 style={[welcomeStyles.logoStyle,{
@@ -48,6 +49,6 @@ export default WelcomeView;
 const welcomeStyles = StyleSheet.create({
     logoStyle : {
         height : '25%',
-        width : '70%'
+        width : '65%'
     }
 })

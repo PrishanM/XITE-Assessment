@@ -11,6 +11,14 @@ export const appColors = {
     secondaryColor : '#ffb300',
     accentColor : '#ffe54c',
 
+    //Gray Variants
+    grayColorVariant1 : '#707070',
+    grayColorVariant2 : '#B7B7B7',
+    grayColorVariant3 : '#C5C6C8',
+    grayColorVariant4 : '#F1EFEF',
+    grayColorVariant5 : '#E8E8E8',
+    grayColorVariant6 : '#FAFAFA',
+
     blackColor : '#000000',
     whiteColor :'#FFFFFF',
 

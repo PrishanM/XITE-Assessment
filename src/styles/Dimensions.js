@@ -33,13 +33,26 @@ export const fontDimensions = {
 }
 
 export const componentDimensions = {
-    viewPadding : '6%',
+    viewPadding : '4%',
+    marginXSmall : 2,
+    marginMidXSmall : 4,
+    marginSmall:6,
+    marginMedium:8,
+    marginLarge:10,
+    marginXLarge:12,
+    marginXXL:14,
+    marginXXXL:16,
     logoHeight : 0.35*height,
-    backIconSize : RFValue(20),
+    supplementaryIconSize:15,
+    backIconSize : RFValue(24),
     xSmallIconSize : RFValue(20),
     smallLogoSize : RFValue(34),
-    cellSize : RFValue(40),
+    cellSizeSmall : RFValue(30),
+    cellSizeMedium : RFValue(40),
+    cellSize : RFValue(50),
     buttonHeight : RFValue(45),
     inputHeight : RFValue(50),
-    navBarHeight : RFValue(64)
+    navBarHeight : RFValue(64),
+    borderRadius : 8,
+    musicCardHeight:100
 }

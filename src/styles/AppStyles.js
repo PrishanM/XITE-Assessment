@@ -30,7 +30,7 @@ export function getFontStyle(color=appColors.blackColor,fontWeight='Roboto-Regul
 export const viewStyles = {
     parentViewStyle : {
         flex:1,
-        backgroundColor:appColors.blackColor,
+        backgroundColor:appColors.primaryColor,
         justifyContent:'center',
         alignItems:'center'
     }
