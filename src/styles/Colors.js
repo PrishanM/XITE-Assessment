@@ -19,6 +19,12 @@ export const appColors = {
     grayColorVariant5 : '#E8E8E8',
     grayColorVariant6 : '#FAFAFA',
 
+    //Genre Colors
+    genreVariant1 : '#e91e63',
+    genreVariant2 : '#00bcd4',
+    genreVariant3 : '#00c853',
+    genreVariant4 : '#2979ff',
+
     blackColor : '#000000',
     whiteColor :'#FFFFFF',
 

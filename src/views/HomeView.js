@@ -4,8 +4,8 @@
  * Copyright (c) 2022. All rights reserved Prishan Maduka
  */
 
-import React, {useEffect, useRef, useState} from 'react';
-import {View,Animated,StyleSheet,BackHandler,Platform,FlatList,Text,Image,TouchableOpacity} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View,Animated,StyleSheet,BackHandler,Platform,Text,Image,TouchableOpacity} from 'react-native';
 import {Actions} from "react-native-router-flux";
 import {viewStyles} from "../styles/AppStyles";
 import NavigationBar from "../components/NavigationBar";
@@ -30,6 +30,8 @@ const HomeView = () => {
     const fetchingData = useSelector(state => state.musicReducer.fetchingData);
     const musicVideosList = useSelector(state => state.musicReducer.musicVideosList);
     const retrievingVideosError = useSelector(state => state.musicReducer.retrievingVideosError);
+
+    const scrollY = React.useRef(new Animated.Value(0)).current;
 
     useEffect(()=>{
         dispatch(getMusicVideosList());
@@ -100,7 +102,7 @@ const HomeView = () => {
                     placeholderTextColor={appColors.primaryColor}
                     onChangeText={onChangeSearch}
                     value={searchQuery}
-                    icon={({size, color, direction})=>(
+                    icon={()=>(
                         <Image source={require('../assets/images/search.png')}
                                style={styles.imageStyle} />
                     )}
@@ -140,8 +142,15 @@ const HomeView = () => {
 
                 </View>
 
-                <FlatList data={musicVideos}
-                          renderItem={({item,index})=><VideoCardItem musicItem={item} index={index}/>}
+                <Animated.FlatList data={musicVideos}
+                          onScroll={Animated.event(
+                              [{ nativeEvent: { contentOffset: { y: scrollY } } }],
+                              { useNativeDriver: true }
+                          )}
+                          renderItem={({item})=>(
+                              <VideoCardItem musicItem={item}
+                                             genre={genres.find(genre => genre.id === item.genre_id)}/>
+                           )}
                           keyExtractor={musicItem=>musicItem.id} />
 
 
