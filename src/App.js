@@ -11,7 +11,6 @@ import {SafeAreaView} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import cfgStore, {persistore} from './redux/store/ConfigureStore';
 import Root from "./navigation";
-import RNUxcam from 'react-native-ux-cam';
 
 const store = cfgStore();
 
@@ -19,7 +18,6 @@ const App = () =>  {
 
   useEffect(()=>{
       SplashScreen.hide();
-      RNUxcam.startWithKey('5kn17zhf2mfonl2');
   },[])
 
   return (
