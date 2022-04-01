@@ -8,6 +8,7 @@ import React from "react";
 import {Image, StyleSheet, TouchableOpacity, View,StatusBar} from "react-native";
 import {appColors} from "../styles/Colors";
 import {componentDimensions, statusBarHeight} from "../styles/Dimensions";
+import {Actions} from "react-native-router-flux";
 
 const NavigationBar = () => {
 
@@ -21,15 +22,21 @@ const NavigationBar = () => {
 
             <View style={[navBarStyle.mainViewStyle,{backgroundColor: appColors.primaryColorDark}]}>
 
-                <TouchableOpacity style={navBarStyle.backIconContainer}>
+                <View style={navBarStyle.logoContainer}>
 
                     <Image source={require('../assets/images/xite_logo_transparent.png')}
                            style={navBarStyle.navigationLogo}
                            resizeMode={'contain'} />
 
-                </TouchableOpacity>
+                </View>
 
-                <View style={{flex:1}} />
+                <TouchableOpacity style={navBarStyle.refreshLogo} onPress={()=>{Actions.refresh({key: Math.random()})}}>
+
+                    <Image source={require('../assets/images/refresh.png')}
+                           style={navBarStyle.refreshLogo}
+                           resizeMode={'contain'} />
+
+                </TouchableOpacity>
 
             </View>
 
@@ -53,11 +60,15 @@ const navBarStyle = StyleSheet.create({
         height : componentDimensions.smallLogoSize,
         width : componentDimensions.smallLogoSize
     },
-    backIconContainer : {
+    logoContainer : {
         justifyContent: 'center',
         alignItems: 'flex-start',
         height: componentDimensions.cellSize,
-        width : componentDimensions.cellSize
+        flex:1
+    },
+    refreshLogo : {
+        height:componentDimensions.xSmallIconSize,
+        width:componentDimensions.xSmallIconSize
     }
 
 })
